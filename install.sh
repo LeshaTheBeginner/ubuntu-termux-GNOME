@@ -37,7 +37,7 @@ fi
 }
 
 install_desktop(){
-echo ${G}"Installing XFCE Desktop..."${W}
+echo ${G}"Installing GNOME Desktop..."${W}
 cat > $CHROOT/root/.bashrc <<- EOF
 apt-get update
 apt install udisks2 -y
@@ -45,7 +45,7 @@ rm -rf /var/lib/dpkg/info/udisks2.postinst
 echo "" >> /var/lib/dpkg/info/udisks2.postinst
 dpkg --configure -a
 apt-mark hold udisks2
-apt-get install xfce4 gnome-terminal nautilus dbus-x11 tigervnc-standalone-server -y
+apt-get install gnome gnome-terminal nautilus dbus-x11 tigervnc-standalone-server -y
 echo "vncserver -geometry 1280x720 -xstartup /usr/bin/startxfce4" >> /usr/local/bin/vncstart
 echo "vncserver -kill :* ; rm -rf /tmp/.X1-lock ; rm -rf /tmp/.X11-unix/X1" >> /usr/local/bin/vncstop
 chmod +x /usr/local/bin/vncstart 
