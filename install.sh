@@ -77,17 +77,7 @@ chmod +x $PREFIX/bin/ubuntu
 rm $CHROOT/root/.bashrc
 }
 
-install_theme(){
-echo ${G}"Installing Theme"${W}
-mv $CHROOT/home/ubuntu/.bashrc $CHROOT/home/ubuntu/.bashrc.bak
-echo "wget https://raw.githubusercontent.com/TecnicalBot/modded-distro/main/theme/theme.sh ; bash  theme.sh; exit" >> $CHROOT/home/ubuntu/.bashrc
-ubuntu
-rm $CHROOT/home/ubuntu/theme.sh*
-rm $CHROOT/home/ubuntu/.bashrc
-mv $CHROOT/home/ubuntu/.bashrc.bak $CHROOT/home/ubuntu/.bashrc
-cp $CHROOT/home/ubuntu/.bashrc $CHROOT/root/.bashrc
-sed -i 's/32/31/g' $CHROOT/root/.bashrc
-}
+
 
 install_extra(){
 echo ${G}"Installing Extra"${W}
@@ -152,6 +142,6 @@ install_ubuntu
 install_desktop
 #install_extra
 adding_user
-install_theme
+
 sound_fix
 final_banner
