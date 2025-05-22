@@ -1,9 +1,11 @@
+<h2>This is a fork to use GNOME DE instead of XFCE4</h2>
+
 [![IMAGE](https://raw.githubusercontent.com/TecnicalBot/modded-distro/main/images/ubuntu.jpg)](https://youtu.be/gzbHaxuWT2E)
 <b><p align="center">Easily install Full Ubuntu Desktop on Android without Root</p></b>
 
 ### Features
 - Looks Exactly like Ubuntu Desktop
-- Lightweight (as uses XFCE desktop environment)
+- Uses GNOME instead of XFCE4 (may be more power consuming)
 - Fixed Audio Output 
 
 ### Video Guide Here
